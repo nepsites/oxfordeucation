@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1a35"/>
+      <stop offset="50%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#2a6a8a"/>
+    </linearGradient>
+    <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3a2a"/>
+      <stop offset="60%" stop-color="#1a2a1a"/>
+      <stop offset="100%" stop-color="#0d150d"/>
+    </linearGradient>
+    <linearGradient id="fjord" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a4a5a"/>
+      <stop offset="100%" stop-color="#0a1e28"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="420" fill="url(#sky)"/>
+  <!-- Stars -->
+  <circle cx="80" cy="25" r="2" fill="white" opacity=".9"/>
+  <circle cx="160" cy="40" r="1.5" fill="white" opacity=".8"/>
+  <circle cx="240" cy="18" r="1" fill="white" opacity=".7"/>
+  <circle cx="380" cy="32" r="2" fill="white" opacity=".9"/>
+  <circle cx="480" cy="22" r="1.5" fill="white" opacity=".8"/>
+  <circle cx="580" cy="48" r="1" fill="white" opacity=".6"/>
+  <circle cx="640" cy="28" r="2" fill="white" opacity=".9"/>
+  <!-- Milky Way arc -->
+  <path d="M0,100 Q350,40 700,80" stroke="white" stroke-width="20" fill="none" opacity=".04"/>
+  <path d="M0,100 Q350,40 700,80" stroke="white" stroke-width="10" fill="none" opacity=".04"/>
+  <!-- Moon -->
+  <circle cx="580" cy="65" r="32" fill="#e0e8d8" opacity=".9"/>
+  <circle cx="594" cy="56" r="27" fill="#1a3a5c"/>
+  <!-- Left mountain (Mitre Peak) -->
+  <polygon points="50,420 200,80 350,420" fill="url(#mtn)"/>
+  <!-- Left mountain snow -->
+  <polygon points="200,80 185,130 215,130" fill="white" opacity=".8"/>
+  <!-- Right mountain range -->
+  <polygon points="350,420 500,120 650,420" fill="url(#mtn)" opacity=".9"/>
+  <polygon points="500,120 485,165 515,165" fill="white" opacity=".7"/>
+  <!-- Far right mountain -->
+  <polygon points="550,420 680,160 700,300 700,420" fill="#0d1a0d" opacity=".85"/>
+  <!-- Far left hills -->
+  <polygon points="0,350 0,420 150,420 100,300" fill="#0d1a0d" opacity=".9"/>
+  <!-- Fjord water -->
+  <rect x="0" y="330" width="700" height="90" fill="url(#fjord)"/>
+  <!-- Water reflections of mountains -->
+  <polygon points="50,330 200,390 350,330" fill="#1a2a1a" opacity=".4"/>
+  <polygon points="350,330 500,385 650,330" fill="#1a2a1a" opacity=".35"/>
+  <!-- Mountain reflection -->
+  <polygon points="185,330 200,380 215,330" fill="white" opacity=".12"/>
+  <!-- Waterfall on mountain -->
+  <path d="M280,140 Q285,200 278,270 Q283,300 280,330" stroke="white" stroke-width="3" fill="none" opacity=".5"/>
+  <!-- Birds -->
+  <path d="M420,110 Q425,105 430,110" stroke="white" stroke-width="1.5" fill="none" opacity=".7"/>
+  <path d="M435,95 Q440,90 445,95" stroke="white" stroke-width="1.5" fill="none" opacity=".6"/>
+  <!-- Boat silhouette -->
+  <ellipse cx="350" cy="370" rx="45" ry="8" fill="#0a1015" opacity=".9"/>
+  <polygon points="310,370 390,370 350,340" fill="#0a1015" opacity=".7"/>
+
+</svg>

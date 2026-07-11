@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="35%" stop-color="#f7b733"/>
+      <stop offset="65%" stop-color="#fc4a1a"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#0d2035"/>
+    </linearGradient>
+    <linearGradient id="bridge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2a"/>
+      <stop offset="100%" stop-color="#0d0d1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="420" fill="url(#sky)"/>
+  <!-- Sun -->
+  <circle cx="350" cy="80" r="50" fill="#FFD700" opacity=".6"/>
+  <circle cx="350" cy="80" r="35" fill="#FFF" opacity=".3"/>
+  <!-- Horizon glow -->
+  <ellipse cx="350" cy="300" rx="350" ry="60" fill="#f7b733" opacity=".2"/>
+  <!-- Harbour Bridge - arch -->
+  <path d="M0,240 Q175,100 350,240" stroke="#1a1a2a" stroke-width="12" fill="none"/>
+  <path d="M350,240 Q525,100 700,240" stroke="#1a1a2a" stroke-width="12" fill="none"/>
+  <!-- Bridge deck -->
+  <rect x="0" y="238" width="700" height="8" fill="#0d0d1a"/>
+  <!-- Bridge pylons -->
+  <rect x="340" y="140" width="20" height="100" fill="#1a1a2a"/>
+  <rect x="130" y="200" width="14" height="40" fill="#1a1a2a"/>
+  <rect x="556" y="200" width="14" height="40" fill="#1a1a2a"/>
+  <!-- Bridge cables/hangers -->
+  <line x1="0" y1="238" x2="342" y2="142" stroke="#1a1a2a" stroke-width="2.5" opacity=".8"/>
+  <line x1="700" y1="238" x2="358" y2="142" stroke="#1a1a2a" stroke-width="2.5" opacity=".8"/>
+  <!-- Opera House shells -->
+  <!-- Shell 1 (left) -->
+  <path d="M320,300 Q290,180 360,300 Z" fill="white" opacity=".92"/>
+  <path d="M335,300 Q300,200 380,300 Z" fill="#e8e8e8" opacity=".85"/>
+  <!-- Shell 2 (middle) -->
+  <path d="M360,300 Q330,150 410,300 Z" fill="white" opacity=".92"/>
+  <path d="M375,300 Q340,165 425,300 Z" fill="#e8e8e8" opacity=".82"/>
+  <!-- Shell 3 (right, smaller) -->
+  <path d="M395,300 Q380,210 430,300 Z" fill="white" opacity=".85"/>
+  <path d="M405,300 Q390,220 440,300 Z" fill="#e0e0e0" opacity=".8"/>
+  <!-- Opera House base -->
+  <rect x="300" y="298" width="160" height="14" fill="#ccc"/>
+  <rect x="285" y="310" width="190" height="10" fill="#bbb"/>
+  <!-- Water -->
+  <rect x="0" y="300" width="700" height="120" fill="url(#water)" opacity=".85"/>
+  <!-- Water reflections -->
+  <ellipse cx="380" cy="320" rx="60" ry="8" fill="white" opacity=".15"/>
+  <ellipse cx="380" cy="335" rx="40" ry="5" fill="white" opacity=".1"/>
+  <!-- Skyline right -->
+  <rect x="480" y="210" width="50" height="100" fill="#0d1625" opacity=".8"/>
+  <rect x="540" y="230" width="40" height="80" fill="#0d1625" opacity=".8"/>
+  <rect x="590" y="200" width="60" height="110" fill="#0d1625" opacity=".8"/>
+  <rect x="660" y="220" width="40" height="90" fill="#0d1625" opacity=".8"/>
+
+</svg>

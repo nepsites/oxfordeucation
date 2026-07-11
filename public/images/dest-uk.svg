@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#2d3561"/>
+      <stop offset="100%" stop-color="#4a6fa5"/>
+    </linearGradient>
+    <linearGradient id="thames" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a5a8a"/>
+      <stop offset="100%" stop-color="#1a2a4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="420" fill="url(#sky)"/>
+  <!-- Clouds -->
+  <ellipse cx="150" cy="60" rx="80" ry="25" fill="#2a2a45" opacity=".6"/>
+  <ellipse cx="500" cy="40" rx="100" ry="30" fill="#2a2a45" opacity=".5"/>
+  <!-- Westminster Bridge -->
+  <rect x="0" y="310" width="700" height="12" fill="#222244"/>
+  <rect x="80" y="305" width="20" height="18" fill="#2a2a4a"/>
+  <rect x="200" y="305" width="20" height="18" fill="#2a2a4a"/>
+  <rect x="320" y="305" width="20" height="18" fill="#2a2a4a"/>
+  <rect x="440" y="305" width="20" height="18" fill="#2a2a4a"/>
+  <rect x="560" y="305" width="20" height="18" fill="#2a2a4a"/>
+  <!-- Thames -->
+  <rect x="0" y="322" width="700" height="98" fill="url(#thames)" opacity=".9"/>
+  <!-- Houses of Parliament -->
+  <rect x="30" y="190" width="280" height="130" fill="#1e1e3a"/>
+  <rect x="30" y="180" width="280" height="12" fill="#16163a"/>
+  <!-- Parliament towers/battlements -->
+  <rect x="30" y="168" width="12" height="14" fill="#16163a"/>
+  <rect x="48" y="168" width="12" height="14" fill="#16163a"/>
+  <rect x="66" y="168" width="12" height="14" fill="#16163a"/>
+  <rect x="84" y="168" width="12" height="14" fill="#16163a"/>
+  <rect x="180" y="168" width="12" height="14" fill="#16163a"/>
+  <rect x="198" y="168" width="12" height="14" fill="#16163a"/>
+  <rect x="216" y="168" width="12" height="14" fill="#16163a"/>
+  <!-- Westminster Tower (smaller) -->
+  <rect x="32" y="100" width="40" height="90" fill="#181830"/>
+  <polygon points="32,100 72,100 52,60" fill="#181830"/>
+  <!-- Big Ben Tower -->
+  <rect x="285" y="80" width="55" height="240" fill="#16163a"/>
+  <!-- Clock face -->
+  <circle cx="312" cy="150" r="22" fill="#e8e8e0" opacity=".9"/>
+  <circle cx="312" cy="150" r="18" fill="#d4d4cc"/>
+  <line x1="312" y1="135" x2="312" y2="150" stroke="#333" stroke-width="2.5"/>
+  <line x1="312" y1="150" x2="325" y2="155" stroke="#333" stroke-width="2"/>
+  <rect cx="312" cy="150" x="285" y="175" width="55" height="8" fill="#13133a"/>
+  <!-- Big Ben spire -->
+  <rect x="295" y="50" width="35" height="32" fill="#13133a"/>
+  <polygon points="295,50 330,50 312,10" fill="#13133a"/>
+  <!-- Reflection -->
+  <rect x="285" y="322" width="55" height="60" fill="#16163a" opacity=".3"/>
+  <!-- Light glow on clock -->
+  <circle cx="312" cy="150" r="28" fill="#f5d280" opacity=".07"/>
+  <!-- Westminster window details -->
+  <rect x="40" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="60" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="80" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="100" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="120" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="140" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="160" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="180" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="200" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="220" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="240" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <rect x="260" y="200" width="8" height="18" fill="#2a2a55" rx="4"/>
+  <!-- Building to the right -->
+  <rect x="370" y="210" width="120" height="120" fill="#181830"/>
+  <rect x="500" y="220" width="200" height="110" fill="#141428"/>
+
+</svg>

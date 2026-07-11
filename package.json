@@ -1,0 +1,23 @@
+{
+  "name": "oxfordeucation",
+  "version": "1.0.0",
+  "description": "Oxford International Education Centre website migrated to Next.js.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write \"app/**/*.{js,jsx}\" \"scripts/**/*.mjs\" \"css/**/*.css\" \"next.config.mjs\"",
+    "format:check": "prettier --check \"app/**/*.{js,jsx}\" \"scripts/**/*.mjs\" \"css/**/*.css\" \"next.config.mjs\""
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.58.0",
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.5"
+  }
+}

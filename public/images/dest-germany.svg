@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a1e"/>
+      <stop offset="50%" stop-color="#1a1a40"/>
+      <stop offset="100%" stop-color="#2a2a60"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8b98a"/>
+      <stop offset="100%" stop-color="#8a7a50"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="420" fill="url(#sky)"/>
+  <!-- Stars -->
+  <circle cx="80" cy="35" r="1.5" fill="white" opacity=".8"/>
+  <circle cx="180" cy="20" r="1" fill="white" opacity=".7"/>
+  <circle cx="300" cy="45" r="2" fill="white" opacity=".9"/>
+  <circle cx="480" cy="25" r="1.5" fill="white" opacity=".8"/>
+  <circle cx="600" cy="55" r="1" fill="white" opacity=".6"/>
+  <circle cx="650" cy="20" r="2" fill="white" opacity=".8"/>
+  <circle cx="130" cy="70" r="1" fill="white" opacity=".5"/>
+  <!-- Moon glow -->
+  <circle cx="120" cy="80" r="30" fill="#d4d4c0" opacity=".85"/>
+  <!-- Ground / foreground -->
+  <rect x="0" y="340" width="700" height="80" fill="#0a0a10"/>
+  <!-- Brandenburg Gate - main structure -->
+  <!-- Entablature (top horizontal block) -->
+  <rect x="160" y="160" width="380" height="25" fill="url(#stone)"/>
+  <rect x="160" y="155" width="380" height="8" fill="#a89060"/>
+  <!-- Attic / Quadriga platform -->
+  <rect x="185" y="100" width="330" height="60" fill="#b8a870"/>
+  <!-- Quadriga (chariot silhouette) -->
+  <ellipse cx="350" cy="88" rx="60" ry="20" fill="#8a6a30"/>
+  <!-- Chariot horses -->
+  <ellipse cx="300" cy="82" rx="18" ry="12" fill="#6a5020"/>
+  <ellipse cx="330" cy="78" rx="18" ry="12" fill="#7a6030"/>
+  <ellipse cx="370" cy="78" rx="18" ry="12" fill="#7a6030"/>
+  <ellipse cx="400" cy="82" rx="18" ry="12" fill="#6a5020"/>
+  <!-- Victory figure -->
+  <ellipse cx="350" cy="68" rx="8" ry="15" fill="#7a6a40"/>
+  <ellipse cx="350" cy="55" rx="6" ry="8" fill="#8a7a50"/>
+  <!-- 6 columns -->
+  <rect x="175" y="185" width="22" height="160" fill="#c8b98a"/>
+  <rect x="225" y="185" width="22" height="160" fill="#c8b98a"/>
+  <rect x="275" y="185" width="22" height="160" fill="#bfb080"/>
+  <rect x="325" y="185" width="22" height="160" fill="#c8b98a"/>
+  <rect x="375" y="185" width="22" height="160" fill="#c8b98a"/>
+  <rect x="425" y="185" width="22" height="160" fill="#bfb080"/>
+  <rect x="475" y="185" width="22" height="160" fill="#c8b98a"/>
+  <!-- Column capitals -->
+  <rect x="170" y="183" width="32" height="6" fill="#a89060"/>
+  <rect x="220" y="183" width="32" height="6" fill="#a89060"/>
+  <rect x="270" y="183" width="32" height="6" fill="#a89060"/>
+  <rect x="320" y="183" width="32" height="6" fill="#a89060"/>
+  <rect x="370" y="183" width="32" height="6" fill="#a89060"/>
+  <rect x="420" y="183" width="32" height="6" fill="#a89060"/>
+  <rect x="470" y="183" width="32" height="6" fill="#a89060"/>
+  <!-- Column bases -->
+  <rect x="170" y="340" width="32" height="6" fill="#a89060"/>
+  <rect x="220" y="340" width="32" height="6" fill="#a89060"/>
+  <rect x="270" y="340" width="32" height="6" fill="#a89060"/>
+  <rect x="320" y="340" width="32" height="6" fill="#a89060"/>
+  <rect x="370" y="340" width="32" height="6" fill="#a89060"/>
+  <rect x="420" y="340" width="32" height="6" fill="#a89060"/>
+  <rect x="470" y="340" width="32" height="6" fill="#a89060"/>
+  <!-- Passage openings (dark archways) -->
+  <rect x="196" y="270" width="36" height="75" fill="#0a0a12" rx="2"/>
+  <rect x="246" y="250" width="62" height="95" fill="#0a0a12" rx="3"/>
+  <rect x="316" y="240" width="68" height="105" fill="#050510" rx="3"/>
+  <rect x="392" y="250" width="62" height="95" fill="#0a0a12" rx="3"/>
+  <rect x="462" y="270" width="36" height="75" fill="#0a0a12" rx="2"/>
+  <!-- Flanking walls -->
+  <rect x="120" y="230" width="55" height="115" fill="#a89060"/>
+  <rect x="520" y="230" width="55" height="115" fill="#a89060"/>
+  <rect x="100" y="225" width="75" height="10" fill="#8a7040"/>
+  <rect x="520" y="225" width="75" height="10" fill="#8a7040"/>
+  <!-- Light on gate -->
+  <rect x="160" y="185" width="380" height="160" fill="#f5d280" opacity=".04"/>
+
+</svg>

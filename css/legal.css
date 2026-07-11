@@ -1,0 +1,136 @@
+.legal-wrap {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.legal-toc {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1.5px solid #e0e4f0;
+  position: sticky;
+  top: 90px;
+}
+.legal-toc h4 {
+  font-size: 14px;
+  font-weight: 900;
+  color: #293294;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ebb011;
+}
+.legal-toc a {
+  display: block;
+  font-size: 13.5px;
+  color: #666688;
+  text-decoration: none;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f2f5;
+  transition: color 0.25s;
+}
+.legal-toc a:hover,
+.legal-toc a.active {
+  color: #293294;
+  font-weight: 700;
+}
+.legal-body {
+  background: #fff;
+  border-radius: 16px;
+  padding: 44px;
+  border: 1.5px solid #e0e4f0;
+}
+.legal-body h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #293294;
+  margin: 36px 0 12px;
+  padding-top: 16px;
+  border-top: 1.5px solid #f0f2f5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.legal-body h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.legal-body h2 .sec-num {
+  min-width: 32px;
+  height: 32px;
+  background: #293294;
+  color: #ebb011;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.legal-body p,
+.legal-body li {
+  font-size: 15px;
+  color: #555570;
+  line-height: 1.85;
+}
+.legal-body ul,
+.legal-body ol {
+  padding-left: 22px;
+  margin: 10px 0 18px;
+}
+.legal-body li {
+  margin-bottom: 7px;
+}
+.legal-body strong {
+  color: #293294;
+}
+.legal-note {
+  background: #f5f7ff;
+  border-left: 4px solid #293294;
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 14px;
+  color: #444;
+}
+.legal-note.warn {
+  background: #fff8e1;
+  border-color: #ebb011;
+}
+.legal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f5f7ff;
+  border: 1.5px solid #e0e4f0;
+  border-radius: 30px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #293294;
+  margin-bottom: 22px;
+}
+@media (max-width: 900px) {
+  .legal-wrap {
+    grid-template-columns: 1fr !important;
+  }
+  .legal-toc {
+    position: static !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-info-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-info-grid2 {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -1,0 +1,45 @@
+# Oxford International Education Centre and Consultancy Nepal
+# https://oxfordeducation.com.np
+# robots.txt
+
+# Allow all crawlers full access
+User-agent: *
+Allow: /
+
+# Block common junk paths
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /*.php$
+Disallow: /tmp/
+
+# AI Crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemap location
+Sitemap: https://oxfordeducation.com.np/sitemap.xml
+
+# Crawl-delay (be nice to server)
+Crawl-delay: 1

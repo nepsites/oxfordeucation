@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Student Portal | Oxford International Education Centre</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="description" content="Oxford International student portal dashboard for application tracking, document management, counsellor messages, and study abroad updates.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Oxford International Education Centre and Consultancy">
+<link rel="canonical" href="https://oxfordeducation.com.np/student-portal.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Student Portal | Oxford International Education Centre">
+<meta property="og:description" content="Oxford International student portal dashboard for application tracking, document management, counsellor messages, and study abroad updates.">
+<meta property="og:url" content="https://oxfordeducation.com.np/student-portal.html">
+<meta property="og:site_name" content="Oxford International Education Centre Nepal">
+<meta property="og:image" content="https://oxfordeducation.com.np/assets/logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Oxford International Education Centre and Consultancy Nepal">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Student Portal | Oxford International Education Centre">
+<meta name="twitter:description" content="Oxford International student portal dashboard for application tracking, document management, counsellor messages, and study abroad updates.">
+<meta name="twitter:image" content="https://oxfordeducation.com.np/assets/logo.png">
+<meta name="twitter:site" content="@OxfordIntlNepal">
+<meta name="theme-color" content="#293294">
+
+<link rel="stylesheet" href="css/student-portal.css">
+<link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+
+<!-- ── SIDEBAR ── -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+<div class="sidebar" id="portalSidebar">
+  <div class="sidebar-logo">
+    <a href="index.html" class="sidebar-brand">
+      <div class="logo-icon"><img src="images/logo.png" alt="Oxford International"></div>
+      <div class="logo-text">
+        <div class="name">Oxford <span>International</span></div>
+        <div class="tagline">Student Portal</div>
+      </div>
+    </a>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-section-label">Main</div>
+      <a href="#" class="nav-item active"><span class="icon"><i class="fas fa-th-large"></i></span> Dashboard</a>
+      <a href="#" class="nav-item"><span class="icon"><i class="fas fa-tasks"></i></span> My Applications <span class="nav-badge">1</span></a>
+      <a href="#" class="nav-item"><span class="icon"><i class="fas fa-comments"></i></span> Messages <span class="nav-badge">3</span></a>
+      <a href="#" class="nav-item"><span class="icon"><i class="fas fa-folder-open"></i></span> Documents</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Resources</div>
+      <a href="services.html" class="nav-item"><span class="icon"><i class="fas fa-globe"></i></span> Destinations</a>
+      <a href="service-test-prep.html" class="nav-item"><span class="icon"><i class="fas fa-book-open"></i></span> Test Prep</a>
+      <a href="blog.html" class="nav-item"><span class="icon"><i class="fas fa-newspaper"></i></span> Guides & Blog</a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">Account</div>
+      <a href="#" class="nav-item"><span class="icon"><i class="fas fa-user-circle"></i></span> My Profile</a>
+      <a href="#" class="nav-item"><span class="icon"><i class="fas fa-bell"></i></span> Notifications <span class="nav-badge">5</span></a>
+      <a href="#" class="nav-item"><span class="icon"><i class="fas fa-cog"></i></span> Settings</a>
+    </div>
+  </nav>
+
+  <div class="sidebar-user">
+    <div class="sidebar-user-inner">
+      <div class="user-avatar">PS</div>
+      <div class="user-info">
+        <strong>Prabhat Sharma</strong>
+        <span>prabhat@gmail.com</span>
+      </div>
+    </div>
+    <a href="student-login.html" class="sidebar-logout"><i class="fas fa-sign-out-alt"></i> Sign out</a>
+  </div>
+</div>
+
+<!-- ── MAIN ── -->
+<div class="main">
+  <div class="topbar">
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="mobile-menu-btn" id="sidebarToggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+      <div class="topbar-title">Dashboard</div>
+    </div>
+    <div class="topbar-right">
+      <div class="notif-btn" onclick="alert('You have 5 new notifications')">
+        <i class="fas fa-bell" style="color:#888;font-size:14px"></i>
+        <div class="notif-dot"></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;cursor:pointer">
+        <div style="width:32px;height:32px;background:#1a1a2e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff">PS</div>
+        <span style="font-size:13px;color:#444">Prabhat</span>
+        <i class="fas fa-chevron-down" style="font-size:10px;color:#ccc"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- Welcome banner -->
+    <div class="status-banner">
+      <div class="left">
+        <h3>👋 Welcome back, Prabhat!</h3>
+        <p>Your Monash University application has a new update — offer letter received!</p>
+      </div>
+      <div><span class="status-pill"><i class="fas fa-circle" style="font-size:6px"></i> Offer Received</span></div>
+    </div>
+
+    <!-- Pipeline -->
+    <div class="pipeline">
+      <h4>Application Pipeline — Monash University, Australia</h4>
+      <div class="pipeline-steps">
+        <div class="pstep done">
+          <div class="pstep-dot"><i class="fas fa-check"></i></div>
+          <div class="pstep-label">Counselling</div>
+        </div>
+        <div class="pstep done">
+          <div class="pstep-dot"><i class="fas fa-check"></i></div>
+          <div class="pstep-label">Documents</div>
+        </div>
+        <div class="pstep done">
+          <div class="pstep-dot"><i class="fas fa-check"></i></div>
+          <div class="pstep-label">Applied</div>
+        </div>
+        <div class="pstep done">
+          <div class="pstep-dot"><i class="fas fa-check"></i></div>
+          <div class="pstep-label">Under Review</div>
+        </div>
+        <div class="pstep active">
+          <div class="pstep-dot"><i class="fas fa-envelope-open"></i></div>
+          <div class="pstep-label">Offer Letter</div>
+        </div>
+        <div class="pstep pending">
+          <div class="pstep-dot"><i class="fas fa-file-invoice-dollar"></i></div>
+          <div class="pstep-label">Fee Payment</div>
+        </div>
+        <div class="pstep pending">
+          <div class="pstep-dot"><i class="fas fa-passport"></i></div>
+          <div class="pstep-label">Visa</div>
+        </div>
+        <div class="pstep pending">
+          <div class="pstep-dot"><i class="fas fa-graduation-cap"></i></div>
+          <div class="pstep-label">Enrolled</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="icon" style="background:#eaf7ef"><i class="fas fa-file-alt" style="color:#27ae60"></i></div>
+        <div class="num">1</div>
+        <div class="lbl">Active Application</div>
+      </div>
+      <div class="stat-card">
+        <div class="icon" style="background:#f4f5f6"><i class="fas fa-comments" style="color:#888"></i></div>
+        <div class="num">3</div>
+        <div class="lbl">Unread Messages</div>
+      </div>
+      <div class="stat-card">
+        <div class="icon" style="background:#eafaf1"><i class="fas fa-folder-open" style="color:#27ae60"></i></div>
+        <div class="num">7</div>
+        <div class="lbl">Documents Uploaded</div>
+      </div>
+      <div class="stat-card">
+        <div class="icon" style="background:#fdedec"><i class="fas fa-bell" style="color:#e74c3c"></i></div>
+        <div class="num" style="color:#e74c3c">5</div>
+        <div class="lbl">New Notifications</div>
+      </div>
+    </div>
+
+    <!-- Main grid -->
+    <div class="grid-2">
+
+      <!-- Messages -->
+      <div class="card">
+        <div class="card-header">
+          <h4><i class="fas fa-comments" style="color:#27ae60;margin-right:7px"></i>Messages</h4>
+          <a href="#">View all</a>
+        </div>
+
+        <!-- Counsellor info -->
+        <div class="counsellor-card">
+          <div class="counsellor-avatar">SK</div>
+          <div>
+            <div class="c-name">Sarita KC</div>
+            <div class="c-role"><span class="online-dot"></span>Your Counsellor · Online now</div>
+              </div>
+        </div>
+
+        <div class="msg">
+          <div class="msg-item">
+            <div class="msg-avatar" style="background:#d0d4f0;color:#555">SK</div>
+            <div class="msg-bubble">
+              <div class="msg-meta">Sarita KC · 2 hours ago</div>
+              <div class="msg-text">Your offer letter from Monash University has arrived! 🎉 Please review and confirm acceptance by Friday, June 30.</div>
+            </div>
+          </div>
+          <div class="msg-item" style="flex-direction:row-reverse">
+            <div class="msg-avatar" style="background:#1a1a2e">PS</div>
+            <div class="msg-bubble me">
+              <div class="msg-meta white">You · 1 hour ago</div>
+              <div class="msg-text white">Thank you so much! I'll review it today. What documents do I need to submit next?</div>
+            </div>
+          </div>
+          <div class="msg-item">
+            <div class="msg-avatar" style="background:#d0d4f0;color:#555">SK</div>
+            <div class="msg-bubble">
+              <div class="msg-meta">Sarita KC · 45 min ago</div>
+              <div class="msg-text">You'll need: 1) Genuine Student (GS) responses, 2) Tuition fee confirmation, 3) Bank statement (last 6 months). I've uploaded a checklist to your documents! 📋</div>
+            </div>
+          </div>
+        </div>
+        <div class="msg-input">
+          <input type="text" placeholder="Type your message..." onkeydown="if(event.key==='Enter')alert('Message sent! (demo)')">
+          <button class="msg-send" onclick="alert('Message sent! (demo)')"><i class="u-fs13 fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+
+      <!-- Documents + Notifications -->
+      <div style="display:flex;flex-direction:column;gap:18px">
+
+        <!-- Documents -->
+        <div class="card">
+          <div class="card-header">
+            <h4><i class="fas fa-folder-open" style="color:#27ae60;margin-right:7px"></i>Documents</h4>
+            <a href="#">Manage</a>
+          </div>
+          <div class="doc-list">
+            <div class="doc-item">
+              <div class="doc-left"><i class="u-red-18 fas fa-file-pdf"></i><div><div class="doc-name">Offer Letter - Monash.pdf</div><div class="doc-size">245 KB</div></div></div>
+              <span class="doc-status ds-new">New</span>
+            </div>
+            <div class="doc-item">
+              <div class="doc-left"><i class="u-red-18 fas fa-file-pdf"></i><div><div class="doc-name">GS Checklist.pdf</div><div class="doc-size">89 KB</div></div></div>
+              <span class="doc-status ds-pending">Pending</span>
+            </div>
+            <div class="doc-item">
+              <div class="doc-left"><i class="fas fa-file-image" style="color:#3498db;font-size:18px"></i><div><div class="doc-name">Passport Copy.jpg</div><div class="doc-size">1.2 MB</div></div></div>
+              <span class="doc-status ds-approved">Approved</span>
+            </div>
+            <div class="doc-item">
+              <div class="doc-left"><i class="u-red-18 fas fa-file-pdf"></i><div><div class="doc-name">IELTS Score Card.pdf</div><div class="doc-size">120 KB</div></div></div>
+              <span class="doc-status ds-approved">Approved</span>
+            </div>
+          </div>
+          <a href="#" class="upload-btn" onclick="alert('Upload feature coming soon!')"><i class="fas fa-cloud-upload-alt"></i> Upload Document</a>
+        </div>
+
+        <!-- Notifications -->
+        <div class="card">
+          <div class="card-header">
+            <h4><i class="fas fa-bell" style="color:#27ae60;margin-right:7px"></i>Recent Alerts</h4>
+            <a href="#">Mark all read</a>
+          </div>
+          <div class="notif-list">
+            <div class="notif-item">
+              <div class="notif-icon" style="background:#fff3cd"><i class="u-orange fas fa-envelope-open"></i></div>
+              <div class="notif-text"><strong>Offer Letter Received</strong><span>Monash University sent your offer</span><span class="notif-time">2 hours ago</span></div>
+            </div>
+            <div class="notif-item">
+              <div class="notif-icon" style="background:#cce5ff"><i class="u-blue fas fa-comments"></i></div>
+              <div class="notif-text"><strong>New Message from Sarita</strong><span>Document checklist uploaded</span><span class="notif-time">45 min ago</span></div>
+            </div>
+            <div class="notif-item">
+              <div class="notif-icon" style="background:#d4edda"><i class="u-green fas fa-check-circle"></i></div>
+              <div class="notif-text"><strong>Passport Approved</strong><span>Your passport copy was verified</span><span class="notif-time">Yesterday</span></div>
+            </div>
+            <div class="notif-item">
+              <div class="notif-icon" style="background:#f4ecf7"><i class="fas fa-university" style="color:#8e44ad"></i></div>
+              <div class="notif-text"><strong>Application Submitted</strong><span>Monash application sent successfully</span><span class="notif-time">3 days ago</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="portal-footer">
+      Oxford International Education Centre & Consultancy · Sukedhara Chowk, Kathmandu ·
+      <a href="tel:+9779851158991">+977 9851158991</a> ·
+      <a href="index.html">Back to Website</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// Active nav highlighting
+document.querySelectorAll('.nav-item').forEach(function(item){
+  item.addEventListener('click',function(e){
+    e.preventDefault();
+    document.querySelectorAll('.nav-item').forEach(function(i){i.classList.remove('active')});
+    this.classList.add('active');
+  });
+});
+
+// Mobile sidebar toggle
+function toggleSidebar() {
+  var sidebar = document.getElementById('portalSidebar');
+  var overlay = document.getElementById('sidebarOverlay');
+  var isOpen = sidebar.classList.contains('open');
+  sidebar.classList.toggle('open', !isOpen);
+  overlay.classList.toggle('open', !isOpen);
+  document.body.style.overflow = isOpen ? '' : 'hidden';
+}
+// Close sidebar on nav item click (mobile)
+document.querySelectorAll('.nav-item').forEach(function(item) {
+  item.addEventListener('click', function() {
+    if (window.innerWidth <= 900) toggleSidebar();
+  });
+});
+</script>
+</body>
+</html>

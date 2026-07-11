@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0d2a"/>
+      <stop offset="40%" stop-color="#1a1050"/>
+      <stop offset="80%" stop-color="#2a204a"/>
+      <stop offset="100%" stop-color="#1a1535"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1525"/>
+      <stop offset="100%" stop-color="#070d18"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="420" fill="url(#sky)"/>
+  <!-- Stars -->
+  <circle cx="60" cy="25" r="1.5" fill="white" opacity=".8"/>
+  <circle cx="140" cy="45" r="1" fill="white" opacity=".6"/>
+  <circle cx="220" cy="20" r="2" fill="white" opacity=".9"/>
+  <circle cx="410" cy="35" r="1.5" fill="white" opacity=".7"/>
+  <circle cx="520" cy="18" r="1" fill="white" opacity=".8"/>
+  <circle cx="660" cy="40" r="2" fill="white" opacity=".7"/>
+  <!-- CN Tower -->
+  <!-- Main shaft -->
+  <polygon points="330,15 370,15 360,280 340,280" fill="#2a2a4a"/>
+  <!-- Observation deck pod -->
+  <ellipse cx="350" cy="190" rx="40" ry="18" fill="#3a3a5a"/>
+  <rect x="310" y="180" width="80" height="20" fill="#2a2a4a" rx="4"/>
+  <!-- Sky pod (higher) -->
+  <ellipse cx="350" cy="145" rx="25" ry="10" fill="#3a3a5a"/>
+  <rect x="325" y="138" width="50" height="14" fill="#2a2a4a" rx="3"/>
+  <!-- Antenna -->
+  <rect x="347" y="15" width="6" height="130" fill="#1a1a3a"/>
+  <rect x="346" y="13" width="8" height="4" fill="#4a4a6a"/>
+  <!-- Observation deck windows (lit) -->
+  <rect x="314" y="183" width="6" height="8" fill="#f5d280" opacity=".8" rx="1"/>
+  <rect x="326" y="183" width="6" height="8" fill="#f5d280" opacity=".8" rx="1"/>
+  <rect x="338" y="183" width="6" height="8" fill="#f5d280" opacity=".6" rx="1"/>
+  <rect x="350" y="183" width="6" height="8" fill="#f5d280" opacity=".8" rx="1"/>
+  <rect x="362" y="183" width="6" height="8" fill="#f5d280" opacity=".7" rx="1"/>
+  <rect x="374" y="183" width="6" height="8" fill="#f5d280" opacity=".8" rx="1"/>
+  <!-- Tower glow -->
+  <ellipse cx="350" cy="190" rx="55" ry="30" fill="#f5d280" opacity=".06"/>
+  <!-- Skyline around tower -->
+  <rect x="0" y="220" width="80" height="200" fill="#0d1020"/>
+  <rect x="10" y="190" width="50" height="32" fill="#0d1020"/>
+  <rect x="90" y="200" width="60" height="220" fill="#111525"/>
+  <rect x="160" y="170" width="55" height="250" fill="#0d1020"/>
+  <rect x="170" y="150" width="35" height="22" fill="#0d1020"/>
+  <rect x="225" y="215" width="70" height="205" fill="#111525"/>
+  <rect x="410" y="200" width="65" height="220" fill="#0d1020"/>
+  <rect x="485" y="180" width="80" height="240" fill="#111525"/>
+  <rect x="575" y="210" width="55" height="210" fill="#0d1020"/>
+  <rect x="640" y="225" width="60" height="195" fill="#111525"/>
+  <!-- Windows on buildings -->
+  <rect x="97" y="210" width="6" height="6" fill="#f5d280" opacity=".6"/>
+  <rect x="110" y="210" width="6" height="6" fill="#f5d280" opacity=".5"/>
+  <rect x="170" y="180" width="6" height="6" fill="#f5d280" opacity=".7"/>
+  <rect x="183" y="180" width="6" height="6" fill="#f5d280" opacity=".6"/>
+  <rect x="418" y="210" width="6" height="6" fill="#f5d280" opacity=".6"/>
+  <rect x="431" y="210" width="6" height="6" fill="#f5d280" opacity=".7"/>
+  <rect x="495" y="190" width="6" height="6" fill="#f5d280" opacity=".5"/>
+  <!-- Water / Lake Ontario -->
+  <rect x="0" y="340" width="700" height="80" fill="url(#water)"/>
+  <!-- Reflections -->
+  <rect x="338" y="345" width="24" height="50" fill="#2a2a4a" opacity=".4"/>
+  <ellipse cx="350" cy="348" rx="30" ry="6" fill="#f5d280" opacity=".08"/>
+
+</svg>

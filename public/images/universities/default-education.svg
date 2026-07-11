@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Education logo placeholder</title>
+  <desc id="desc">A simple graduation cap and book icon for missing university logos.</desc>
+  <rect width="160" height="160" rx="32" fill="#f4f6ff"/>
+  <circle cx="80" cy="80" r="56" fill="#ffffff" stroke="#dfe4f2" stroke-width="4"/>
+  <path d="M32 66 80 42l48 24-48 24-48-24Z" fill="#293294"/>
+  <path d="M52 78v22c0 8 13 16 28 16s28-8 28-16V78L80 92 52 78Z" fill="#f5b400"/>
+  <path d="M120 70v27" stroke="#293294" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="120" cy="104" r="7" fill="#293294"/>
+  <path d="M54 118h52" stroke="#dfe4f2" stroke-width="6" stroke-linecap="round"/>
+</svg>
