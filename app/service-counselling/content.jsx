@@ -110,8 +110,8 @@ export default function PageContent() {
               </p>
               <p className="u-body-15-mb24">
                 This is not a sales pitch. It is a genuine advisory session with no pressure and no
-                cost. We have helped <strong>5,000+ students</strong> since 2015, and every journey
-                started with this conversation.
+                cost. We have helped many students plan their next step since 2015, and every
+                journey started with this conversation.
               </p>
               <div className="highlight-bar">
                 <i className="fas fa-award"></i>

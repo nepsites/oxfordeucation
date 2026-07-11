@@ -237,7 +237,7 @@ export default function Header() {
                   </div>
                   <div>
                     <strong>Success Stories</strong>
-                    <span>5000+ students sent abroad to study</span>
+                    <span>Student journeys, outcomes, and testimonials</span>
                   </div>
                 </a>
                 <a href="/gallery" className="nav-dd-item">

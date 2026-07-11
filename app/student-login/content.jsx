@@ -265,7 +265,7 @@ export default function PageContent() {
               {/*  Stats  */}
               <div className="login-stats">
                 <div className="ls-card">
-                  <strong>5,000+</strong>
+                  <strong>Many</strong>
                   <span>Students Helped</span>
                 </div>
                 <div className="ls-card">
@@ -480,7 +480,10 @@ export default function PageContent() {
                   </a>
                   <div className="divider-or">OR</div>
                   {registerSuccess ? (
-                    <div className="u-txt-sm-555c" style={{ textAlign: 'center', padding: '12px 0' }}>
+                    <div
+                      className="u-txt-sm-555c"
+                      style={{ textAlign: 'center', padding: '12px 0' }}
+                    >
                       <i className="fas fa-envelope-circle-check" style={{ color: '#2e7d32' }}></i>{' '}
                       Almost there! We&apos;ve sent a confirmation link to your email — click it to
                       activate your account, then log in.
@@ -498,7 +501,12 @@ export default function PageContent() {
                       <form onSubmit={handleRegister}>
                         <div className="form-group">
                           <label>Full Name</label>
-                          <input type="text" name="fullName" placeholder="Your full name" required />
+                          <input
+                            type="text"
+                            name="fullName"
+                            placeholder="Your full name"
+                            required
+                          />
                         </div>
                         <div className="form-group">
                           <label>Email Address</label>
@@ -591,7 +599,7 @@ export default function PageContent() {
               <i className="u-gold fas fa-star"></i> 4.9 ★ Rated Consultancy
             </div>
             <div className="trust-item">
-              <i className="fas fa-user-graduate"></i> 5000+ Students Guided Abroad
+              <i className="fas fa-user-graduate"></i> Practical Student Guidance
             </div>
             <div className="trust-item">
               <i className="fas fa-certificate"></i> Registered & Certified Since 2015

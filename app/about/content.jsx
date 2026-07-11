@@ -145,7 +145,7 @@ export default function PageContent() {
                 </h3>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px' }}>
                   <div className="u-glass-card">
-                    <div className="u-gold-h1">5000+</div>
+                    <div className="u-gold-h1">Many</div>
                     <div className="u-txt-sm-muted4">Students Guided Abroad</div>
                   </div>
                   <div className="u-glass-card">
@@ -423,9 +423,9 @@ export default function PageContent() {
                 <div className="jt-year">2026</div>
                 <h3>Setting the Standard</h3>
                 <p>
-                  With 5000+ students sent abroad to study in 25+ countries and a strong visa
-                  success track record, Oxford International remains committed to providing honest,
-                  high-quality education counselling to every student we serve.
+                  With years of student counselling experience across many study destinations,
+                  Oxford International remains committed to providing honest, high-quality education
+                  counselling to every student we serve.
                 </p>
               </div>
               <div className="jt-dot">
@@ -449,9 +449,7 @@ export default function PageContent() {
             }}
           >
             <div className="u-stat-box">
-              <div className="u-gold-h1b">
-                5000<span className="u-fs22">+</span>
-              </div>
+              <div className="u-gold-h1b">Many</div>
               <div className="u-txt-sm-muted5">Students Guided Abroad</div>
             </div>
             <div className="u-stat-box">

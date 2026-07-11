@@ -118,8 +118,8 @@ export default function PageContent() {
                   <div className="u-txt-12-grey-mt2">Visa Success Rate</div>
                 </div>
                 <div className="u-info-box7">
-                  <div className="u-phead3">5000+</div>
-                  <div className="u-txt-12-grey-mt2">Visas Processed</div>
+                  <div className="u-phead3">Many</div>
+                  <div className="u-txt-12-grey-mt2">Visa Cases Guided</div>
                 </div>
                 <div className="u-info-box7">
                   <div className="u-phead3">10+</div>

@@ -5,14 +5,14 @@ import PageContent from './content';
 export const metadata = {
   title: 'Student Success Stories | Oxford International Education Centre Nepal',
   description:
-    '5000+ students sent abroad to study through Oxford International Nepal. Read real success stories from students who studied in Australia, UK, Japan, Germany, Canada and South Korea.',
+    'Student journeys and success stories through Oxford International Nepal. Read real success stories from students who studied in Australia, UK, Japan, Germany, Canada and South Korea.',
   keywords:
     'student testimonials Nepal, study abroad success Nepal, Oxford International students, visa success Nepal',
   alternates: { canonical: '/students' },
   openGraph: {
     title: 'Student Success Stories | Oxford International Education Centre Nepal',
     description:
-      '5000+ students sent abroad to study through Oxford International Nepal. Read real success stories from students who studied in Australia, UK, Japan, Germany, Canada and South Korea.',
+      'Student journeys and success stories through Oxford International Nepal. Read real success stories from students who studied in Australia, UK, Japan, Germany, Canada and South Korea.',
     url: 'https://oxfordeducation.com.np/students',
     siteName: 'Oxford International Education Centre Nepal',
     images: ['/images/logo.png'],
@@ -23,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Student Success Stories | Oxford International Education Centre Nepal',
     description:
-      '5000+ students sent abroad to study through Oxford International Nepal. Read real success stories from students who studied in Australia, UK, Japan, Germany, Canada and South Korea.',
+      'Student journeys and success stories through Oxford International Nepal. Read real success stories from students who studied in Australia, UK, Japan, Germany, Canada and South Korea.',
     images: ['/images/logo.png'],
   },
 };

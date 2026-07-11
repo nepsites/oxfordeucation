@@ -414,7 +414,7 @@ export default function PageContent() {
                 >
                   <i className="fas fa-certificate"></i>Est. 2015
                 </div>
-                {/*  Floating badge: 5000+ Students  */}
+                {/*  Floating badge: student support  */}
                 <div
                   style={{
                     position: 'absolute',
@@ -433,7 +433,7 @@ export default function PageContent() {
                     gap: '5px',
                   }}
                 >
-                  <i className="fas fa-user-graduate"></i>5000+ Students
+                  <i className="fas fa-user-graduate"></i>Student Support
                 </div>
               </div>
               {/*  Destinations mini-card  */}
@@ -587,9 +587,7 @@ export default function PageContent() {
               <div className="stat-icon">
                 <i className="fas fa-user-graduate"></i>
               </div>
-              <div className="stat-number">
-                <Counter target={5000} suffix="+" />
-              </div>
+              <div className="stat-number">Many</div>
               <div className="stat-label">Students Guided Abroad</div>
             </div>
             <div className="stat-item">
@@ -828,8 +826,8 @@ export default function PageContent() {
                 lineHeight: '1.7',
               }}
             >
-              Since 2015, we have guided 5000+ students from Sukedhara Chowk, Kathmandu to
-              universities across 25+ countries — with a strong visa success track record.
+              Since 2015, we have guided students from Sukedhara Chowk, Kathmandu toward
+              universities across many study destinations with practical, honest counselling.
             </p>
           </div>
           {/*  6 Feature Cards  */}
@@ -1063,7 +1061,7 @@ export default function PageContent() {
             </h2>
             <div className="divider divider-center"></div>
             <p className="section-sub">
-              Real stories from 5000+ students we've helped reach their dream universities.
+              Real stories from students we've helped move closer to their dream universities.
             </p>
           </div>
           <TestimonialCarousel />

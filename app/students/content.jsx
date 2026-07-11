@@ -70,8 +70,8 @@ export default function PageContent() {
             Our <span>Student Success Stories</span>
           </h1>
           <p>
-            5000+ students have trusted Oxford International to guide them to their dream
-            universities. Here are their stories.
+            Students have trusted Oxford International for practical study-abroad guidance. Here are
+            their stories.
           </p>
         </div>
       </div>
@@ -227,7 +227,7 @@ export default function PageContent() {
               <div className="u-txt-sm-muted">Based on Google Reviews</div>
             </div>
             <div className="u-card-center">
-              <div className="u-phead4">5000+</div>
+              <div className="u-phead4">Many</div>
               <div className="u-txt-sm-grey-mt4">Students Guided Abroad</div>
               <div
                 style={{ fontSize: '13px', color: '#c99200', fontWeight: '700', marginTop: '4px' }}
@@ -305,7 +305,7 @@ export default function PageContent() {
 
       <CtaSection
         title="Be Our Next Success Story!"
-        text="Join 5000+ students who trusted Oxford International with their dreams."
+        text="Start your study-abroad journey with clear counselling and practical next steps."
         actions={[
           {
             href: '/contact',
