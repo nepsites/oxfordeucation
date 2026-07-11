@@ -1,5 +1,6 @@
 import './globals.css';
 import SmoothAnchorScroll from './_components/SmoothAnchorScroll';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   metadataBase: new URL('https://oxfordeducation.com.np'),
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       </head>
       <body suppressHydrationWarning>
         {children}
+        <SpeedInsights />
         <SmoothAnchorScroll />
       </body>
     </html>
