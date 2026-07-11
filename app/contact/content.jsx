@@ -461,30 +461,69 @@ export default function PageContent() {
       <section style={{ padding: '0' }}>
         <div
           style={{
-            height: '380px',
+            minHeight: '460px',
             background: 'linear-gradient(135deg,#293294 0%,#1e2570 50%,#293294 100%)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            gap: '18px',
+            padding: '42px 18px',
           }}
         >
-          <div style={{ fontSize: '56px' }}>🗺</div>
-          <div style={{ textAlign: 'center', color: '#fff' }}>
-            <h3 style={{ fontSize: '22px', fontWeight: '900', marginBottom: '8px' }}>
-              Sukedhara Chowk, Kathmandu, Nepal
-            </h3>
-            <p style={{ color: 'rgba(255,255,255,.75)', fontSize: '15px', marginBottom: '22px' }}>
-              Near Ring Road, easily accessible by public and private vehicles
-            </p>
-            <a
-              href="https://www.google.com/maps/search/Sukedhara+Chowk+Kathmandu+Nepal"
-              target="_blank"
-              className="btn btn-white"
+          <div className="container">
+            <div
+              style={{
+                position: 'relative',
+                overflow: 'hidden',
+                borderRadius: '20px',
+                border: '1px solid rgba(255,255,255,.22)',
+                boxShadow: '0 24px 70px rgba(8,12,60,.35)',
+                background: '#fff',
+                minHeight: '380px',
+              }}
             >
-              <i className="fas fa-map-marker-alt"></i> Open in Google Maps
-            </a>
+              <iframe
+                title="Oxford International location on OpenStreetMap"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=85.3418%2C27.7243%2C85.3518%2C27.7343&layer=mapnik&marker=27.7293%2C85.3468"
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  height: '380px',
+                  border: '0',
+                }}
+                loading="lazy"
+              ></iframe>
+              <div
+                style={{
+                  position: 'absolute',
+                  left: '22px',
+                  bottom: '22px',
+                  maxWidth: '420px',
+                  background: 'rgba(30,37,112,.94)',
+                  color: '#fff',
+                  borderRadius: '16px',
+                  padding: '20px 22px',
+                  boxShadow: '0 14px 40px rgba(0,0,0,.25)',
+                }}
+              >
+                <h3 style={{ fontSize: '22px', fontWeight: '900', marginBottom: '8px' }}>
+                  Sukedhara Chowk, Kathmandu, Nepal
+                </h3>
+                <p
+                  style={{
+                    color: 'rgba(255,255,255,.78)',
+                    fontSize: '15px',
+                    lineHeight: '1.6',
+                    marginBottom: '16px',
+                  }}
+                >
+                  Near Ring Road, easily accessible by public and private vehicles.
+                </p>
+                <a
+                  href="https://www.openstreetmap.org/?mlat=27.7293&mlon=85.3468#map=17/27.7293/85.3468"
+                  target="_blank"
+                  className="btn btn-white"
+                >
+                  <i className="fas fa-map-marker-alt"></i> Open in OpenStreetMap
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
