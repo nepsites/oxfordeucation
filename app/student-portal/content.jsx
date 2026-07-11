@@ -14,7 +14,7 @@ const NAV_ITEMS = [
 
 const APPLICATIONS = [
   {
-    flag: '🇦🇺',
+    flag: 'AU',
     university: 'Monash University',
     country: 'Australia',
     status: { label: 'Offer Received', variant: 'green' },
@@ -30,7 +30,7 @@ const APPLICATIONS = [
     ],
   },
   {
-    flag: '🇨🇦',
+    flag: 'CA',
     university: 'University of Toronto',
     country: 'Canada',
     status: { label: 'Under Review', variant: 'blue' },
@@ -228,11 +228,14 @@ export default function PageContent({ user }) {
 
       <div className="main">
         <div className="topbar">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div className="topbar-left">
             <button className="mobile-menu-btn" id="sidebarToggle" onClick={toggleSidebar}>
               <i className="fas fa-bars"></i>
             </button>
-            <div className="topbar-title">Dashboard</div>
+            <div>
+              <div className="topbar-title">Student Dashboard</div>
+              <div className="topbar-subtitle">Track applications, tasks, and documents</div>
+            </div>
           </div>
           <div className="topbar-right">
             <div
@@ -241,27 +244,13 @@ export default function PageContent({ user }) {
                 alert('You have 5 new notifications');
               }}
             >
-              <i className="fas fa-bell" style={{ color: '#888', fontSize: '14px' }}></i>
+              <i className="fas fa-bell"></i>
               <div className="notif-dot"></div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
-              <div
-                style={{
-                  width: '32px',
-                  height: '32px',
-                  background: '#1a1a2e',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '12px',
-                  color: '#fff',
-                }}
-              >
-                {initials}
-              </div>
-              <span style={{ fontSize: '13px', color: '#444' }}>{firstName}</span>
-              <i className="fas fa-chevron-down" style={{ fontSize: '10px', color: '#ccc' }}></i>
+            <div className="topbar-user">
+              <div className="topbar-avatar">{initials}</div>
+              <span>{firstName}</span>
+              <i className="fas fa-chevron-down"></i>
             </div>
           </div>
         </div>
@@ -269,7 +258,11 @@ export default function PageContent({ user }) {
           {/*  Hero  */}
           <div className="portal-hero">
             <div className="hero-left">
-              <h3>👋 Welcome back, {firstName}!</h3>
+              <div className="hero-kicker">
+                <i className="fas fa-compass"></i>
+                Admissions workspace
+              </div>
+              <h3>Welcome back, {firstName}</h3>
               <p>
                 Your Monash University application has a new update — offer letter received! You
                 have 2 active applications and 1 task overdue.
@@ -303,8 +296,7 @@ export default function PageContent({ user }) {
                     </div>
                   </div>
                   <span className={`app-status-pill ${app.status.variant}`}>
-                    <i className="fas fa-circle" style={{ fontSize: '6px' }}></i>{' '}
-                    {app.status.label}
+                    <i className="fas fa-circle" style={{ fontSize: '6px' }}></i> {app.status.label}
                   </span>
                 </div>
                 <div className="pipeline-steps">
@@ -472,8 +464,8 @@ export default function PageContent({ user }) {
                     <div className="msg-preview-body">
                       <div className="msg-preview-meta">Sarita KC · 45 min ago</div>
                       <div className="msg-preview-text">
-                        You&apos;ll need: 1) Genuine Student responses, 2) Tuition fee
-                        confirmation, 3) Bank statement (last 6 months).
+                        You&apos;ll need: 1) Genuine Student responses, 2) Tuition fee confirmation,
+                        3) Bank statement (last 6 months).
                       </div>
                     </div>
                   </div>
