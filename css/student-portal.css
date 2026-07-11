@@ -13,8 +13,8 @@ body {
 
 /* ── SIDEBAR ── */
 .sidebar {
-  width: 272px;
-  min-width: 272px;
+  width: 300px;
+  min-width: 300px;
   background: #10162f;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
   min-height: 100vh;
@@ -54,7 +54,7 @@ body {
   object-fit: contain;
 }
 .sidebar-brand .logo-text .name {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   color: #fff;
   line-height: 1.15;
@@ -63,68 +63,75 @@ body {
   color: #ebb011;
 }
 .sidebar-brand .logo-text .tagline {
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 3px;
 }
 
 /* Nav */
 .sidebar-nav {
+  display: flex;
   flex: 1;
-  padding: 16px 12px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 14px;
   overflow-y: auto;
 }
-.nav-section {
-  padding: 4px 0 18px;
+.portal-nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 0 8px;
 }
-.nav-section-label {
-  font-size: 11px;
+.portal-nav-section-label {
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.38);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 0 10px 8px;
 }
-.nav-item {
+.portal-nav-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-height: 42px;
-  padding: 10px 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 14px;
   margin: 2px 0;
   border-radius: 10px;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 14px;
-  font-weight: 650;
+  font-size: 16px;
+  font-weight: 750;
   cursor: pointer;
   transition: 0.15s;
   text-decoration: none;
   position: relative;
 }
-.nav-item:hover {
+.portal-nav-item:hover {
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
 }
-.nav-item.active {
+.portal-nav-item.active {
   color: #10162f;
   background: #fff;
 }
-.nav-item.active .icon {
+.portal-nav-item.active .icon {
   color: #27ae60;
 }
-.nav-item .icon {
-  width: 22px;
+.portal-nav-item .icon {
+  width: 24px;
   text-align: center;
-  font-size: 15px;
+  font-size: 17px;
   color: inherit;
   flex-shrink: 0;
 }
-.nav-badge {
+.portal-nav-badge {
   margin-left: auto;
   min-width: 22px;
   height: 22px;
   background: #ebb011;
   color: #10162f;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 800;
   padding: 3px 7px;
   border-radius: 20px;
@@ -146,14 +153,14 @@ body {
   border-radius: 12px;
 }
 .user-avatar {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   background: #ebb011;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   color: #10162f;
   flex-shrink: 0;
@@ -161,9 +168,9 @@ body {
 .user-info strong {
   display: block;
   color: #fff;
-  font-size: 13px;
-  line-height: 18px;
-  max-width: 170px;
+  font-size: 15px;
+  line-height: 20px;
+  max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -171,9 +178,9 @@ body {
 .user-info span {
   display: block;
   color: rgba(255, 255, 255, 0.58);
-  font-size: 12px;
-  line-height: 17px;
-  max-width: 170px;
+  font-size: 14px;
+  line-height: 19px;
+  max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -185,7 +192,7 @@ body {
   gap: 8px;
   padding: 10px 12px;
   color: rgba(255, 255, 255, 0.66);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   border-radius: 10px;
   text-decoration: none;
@@ -223,7 +230,7 @@ body {
 
 /* ── MAIN ── */
 .main {
-  margin-left: 272px;
+  margin-left: 300px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -249,13 +256,13 @@ body {
   min-width: 0;
 }
 .topbar-title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 800;
   color: #10162f;
   line-height: 24px;
 }
 .topbar-subtitle {
-  font-size: 13px;
+  font-size: 16px;
   color: #70778a;
   line-height: 18px;
 }
@@ -309,17 +316,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
   color: #fff;
 }
 .topbar-user span {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #30364a;
 }
 .topbar-user i {
-  font-size: 10px;
+  font-size: 12px;
   color: #9aa1b3;
 }
 .content {
@@ -364,7 +371,7 @@ body {
   gap: 8px;
   margin-bottom: 12px;
   color: #ebb011;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
 }
 .portal-hero h3 {
@@ -414,7 +421,7 @@ body {
   font-size: 14px;
 }
 .hero-progress .hero-progress-label span {
-  font-size: 13px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.65);
 }
 .hero-cta {
@@ -423,7 +430,7 @@ body {
   border: none;
   padding: 10px 18px;
   border-radius: 9px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   display: inline-flex;
@@ -439,7 +446,7 @@ body {
 
 /* ── APPLICATIONS ── */
 .section-label {
-  font-size: 12px;
+  font-size: 14px;
   color: #70778a;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -478,7 +485,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 900;
   color: #293294;
   flex-shrink: 0;
@@ -489,11 +496,11 @@ body {
   color: #1a1a2e;
 }
 .app-card-uni span {
-  font-size: 13px;
+  font-size: 15px;
   color: #70778a;
 }
 .app-status-pill {
-  font-size: 11px;
+  font-size: 13px;
   padding: 5px 13px;
   border-radius: 20px;
   display: inline-flex;
@@ -549,7 +556,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10.5px;
+  font-size: 12px;
   margin-bottom: 6px;
   position: relative;
   z-index: 1;
@@ -570,7 +577,7 @@ body {
   border: 1.5px solid #e4e6e9;
 }
 .pstep-label {
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
   line-height: 15px;
 }
@@ -616,7 +623,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 10px;
+  font-size: 12px;
   color: transparent;
 }
 .task-item.done .task-check {
@@ -632,7 +639,7 @@ body {
   min-width: 0;
 }
 .task-title {
-  font-size: 13px;
+  font-size: 15px;
   color: #333;
 }
 .task-item.done .task-title {
@@ -640,7 +647,7 @@ body {
   text-decoration: line-through;
 }
 .task-due {
-  font-size: 11px;
+  font-size: 13px;
   color: #aaa;
   margin-top: 1px;
 }
@@ -678,7 +685,7 @@ body {
   margin-bottom: 2px;
 }
 .stat-card .lbl {
-  font-size: 13px;
+  font-size: 15px;
   color: #70778a;
 }
 
@@ -713,7 +720,7 @@ body {
   color: #1a1a2e;
 }
 .card-header a {
-  font-size: 13px;
+  font-size: 15px;
   color: #70778a;
   text-decoration: none;
   transition: 0.15s;
@@ -751,7 +758,7 @@ body {
   margin-bottom: 3px;
 }
 .c-role {
-  font-size: 13px;
+  font-size: 15px;
   color: #70778a;
 }
 .online-dot {
@@ -782,7 +789,7 @@ body {
   text-align: center;
   padding: 8px 10px;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   text-decoration: none;
   transition: 0.15s;
@@ -827,7 +834,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 13px;
   color: #fff;
   background: #ccc;
 }
@@ -836,12 +843,12 @@ body {
   min-width: 0;
 }
 .msg-preview-meta {
-  font-size: 12px;
+  font-size: 14px;
   color: #70778a;
   margin-bottom: 2px;
 }
 .msg-preview-text {
-  font-size: 13px;
+  font-size: 15px;
   color: #444;
   line-height: 1.4;
   overflow: hidden;
@@ -857,7 +864,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 15px;
   color: #70778a;
 }
 .doc-summary strong {
@@ -904,7 +911,7 @@ body {
   min-width: 0;
 }
 .doc-name {
-  font-size: 13px;
+  font-size: 15px;
   color: #333;
   margin-bottom: 1px;
   overflow: hidden;
@@ -912,12 +919,12 @@ body {
   white-space: nowrap;
 }
 .doc-size {
-  font-size: 12px;
+  font-size: 14px;
   color: #70778a;
 }
 .doc-status {
   flex-shrink: 0;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
   padding: 3px 9px;
   border-radius: 20px;
@@ -942,7 +949,7 @@ body {
   border-radius: 8px;
   background: #f7f8f9;
   color: #aaa;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   cursor: pointer;
   display: flex;
@@ -981,7 +988,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 15px;
 }
 .notif-text strong {
   display: block;
@@ -990,11 +997,11 @@ body {
   margin-bottom: 2px;
 }
 .notif-text span {
-  font-size: 13px;
+  font-size: 15px;
   color: #70778a;
 }
 .notif-time {
-  font-size: 12px;
+  font-size: 14px;
   color: #9aa1b3;
   margin-top: 1px;
   display: block;
@@ -1005,7 +1012,7 @@ body {
   text-align: center;
   padding: 14px 0;
   color: #70778a;
-  font-size: 13px;
+  font-size: 15px;
   border-top: 1px solid #e4e6e9;
 }
 .portal-footer a {
@@ -1019,7 +1026,7 @@ body {
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .sidebar {
-    left: -290px;
+    left: -320px;
   }
   .sidebar.open {
     left: 0;
@@ -1077,7 +1084,7 @@ body {
     grid-template-columns: 1fr;
   }
   .pstep-label {
-    font-size: 10.5px;
+    font-size: 12px;
   }
   .card,
   .app-card {

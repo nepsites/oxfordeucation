@@ -148,13 +148,13 @@ export default function PageContent({ user }) {
           </a>
         </div>
         <nav className="sidebar-nav">
-          <div className="nav-section">
-            <div className="nav-section-label">Main</div>
+          <div className="portal-nav-section">
+            <div className="portal-nav-section-label">Main</div>
             {NAV_ITEMS.map((item) => (
               <a
                 href={item.href}
                 key={item.label}
-                className={`nav-item${activeNav === item.label ? ' active' : ''}`}
+                className={`portal-nav-item${activeNav === item.label ? ' active' : ''}`}
                 onClick={(e) => {
                   e.preventDefault();
                   selectNav(item.label);
@@ -163,46 +163,47 @@ export default function PageContent({ user }) {
                 <span className="icon">
                   <i className={item.icon}></i>
                 </span>{' '}
-                {item.label} {item.badge ? <span className="nav-badge">{item.badge}</span> : null}
+                {item.label}{' '}
+                {item.badge ? <span className="portal-nav-badge">{item.badge}</span> : null}
               </a>
             ))}
           </div>
-          <div className="nav-section">
-            <div className="nav-section-label">Resources</div>
-            <a href="/services" className="nav-item">
+          <div className="portal-nav-section">
+            <div className="portal-nav-section-label">Resources</div>
+            <a href="/services" className="portal-nav-item">
               <span className="icon">
                 <i className="fas fa-globe"></i>
               </span>{' '}
               Destinations
             </a>
-            <a href="/service-test-prep" className="nav-item">
+            <a href="/service-test-prep" className="portal-nav-item">
               <span className="icon">
                 <i className="fas fa-book-open"></i>
               </span>{' '}
               Test Prep
             </a>
-            <a href="/blog" className="nav-item">
+            <a href="/blog" className="portal-nav-item">
               <span className="icon">
                 <i className="fas fa-newspaper"></i>
               </span>{' '}
               Guides & Blog
             </a>
           </div>
-          <div className="nav-section">
-            <div className="nav-section-label">Account</div>
-            <a href="#" className="nav-item">
+          <div className="portal-nav-section">
+            <div className="portal-nav-section-label">Account</div>
+            <a href="#" className="portal-nav-item">
               <span className="icon">
                 <i className="fas fa-user-circle"></i>
               </span>{' '}
               My Profile
             </a>
-            <a href="#" className="nav-item">
+            <a href="#" className="portal-nav-item">
               <span className="icon">
                 <i className="fas fa-bell"></i>
               </span>{' '}
-              Notifications <span className="nav-badge">5</span>
+              Notifications <span className="portal-nav-badge">5</span>
             </a>
-            <a href="#" className="nav-item">
+            <a href="#" className="portal-nav-item">
               <span className="icon">
                 <i className="fas fa-cog"></i>
               </span>{' '}
