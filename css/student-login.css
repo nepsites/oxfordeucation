@@ -129,7 +129,6 @@
   align-items: flex-start;
   gap: 16px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  border: 1px solid #ebebeb;
   transition: 0.25s;
 }
 .fc:hover {
@@ -172,7 +171,6 @@
   border-radius: 12px;
   padding: 16px;
   text-align: center;
-  border: 1px solid #e8e8e8;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 .ls-card strong {
@@ -194,7 +192,6 @@
   border-radius: 20px;
   padding: 36px 32px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(41, 50, 148, 0.06);
   position: sticky;
   top: 100px;
 }
@@ -231,7 +228,7 @@
   display: flex;
   gap: 0;
   margin-bottom: 24px;
-  border: 1.5px solid #e0e4f0;
+  border: 1.5px solid #e2e2e2;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -259,7 +256,7 @@
   gap: 11px;
   width: 100%;
   padding: 13px 20px;
-  border: 1.5px solid #e0e4f0;
+  border: 1.5px solid #e2e2e2;
   border-radius: 11px;
   background: #fff;
   color: #1a1a3a;
@@ -272,7 +269,7 @@
 }
 .btn-google:hover {
   border-color: #293294;
-  background: #f5f7ff;
+  background: #f5f5f5;
   box-shadow: 0 4px 16px rgba(41, 50, 148, 0.1);
 }
 .btn-google svg {
@@ -295,7 +292,7 @@
   content: '';
   flex: 1;
   height: 1px;
-  background: #e8eaf0;
+  background: #e2e2e2;
 }
 
 /* Login method toggle */
@@ -346,7 +343,7 @@
 .form-group input {
   width: 100%;
   padding: 11px 14px;
-  border: 1.5px solid #e0e4f0;
+  border: 1.5px solid #e2e2e2;
   border-radius: 10px;
   font-size: 14px;
   color: #1a1a3a;
@@ -368,7 +365,7 @@
 .phone-input-wrap {
   display: flex;
   align-items: center;
-  border: 1.5px solid #e0e4f0;
+  border: 1.5px solid #e2e2e2;
   border-radius: 10px;
   background: #fafbff;
   overflow: hidden;
@@ -386,7 +383,7 @@
   font-size: 14px;
   color: #555;
   background: #f0f2f7;
-  border-right: 1.5px solid #e0e4f0;
+  border-right: 1.5px solid #e2e2e2;
   flex-shrink: 0;
   user-select: none;
 }
@@ -525,7 +522,7 @@
 /* ── TRUST STRIP ── */
 .trust-strip {
   background: #fff;
-  border-top: 1px solid #e8eaf0;
+  border-top: 1px solid #e2e2e2;
   padding: 32px 0;
   margin-top: 0;
 }

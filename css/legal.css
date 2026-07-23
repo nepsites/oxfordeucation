@@ -8,7 +8,7 @@
   background: #fff;
   border-radius: 16px;
   padding: 24px;
-  border: 1.5px solid #e0e4f0;
+  border: 1.5px solid #e2e2e2;
   position: sticky;
   top: 90px;
 }
@@ -40,7 +40,7 @@
   background: #fff;
   border-radius: 16px;
   padding: 44px;
-  border: 1.5px solid #e0e4f0;
+  border: 1.5px solid #e2e2e2;
 }
 .legal-body h2 {
   font-size: 20px;
@@ -89,7 +89,7 @@
   color: #293294;
 }
 .legal-note {
-  background: #f5f7ff;
+  background: #f5f5f5;
   border-left: 4px solid #293294;
   border-radius: 0 10px 10px 0;
   padding: 14px 18px;
@@ -105,8 +105,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f5f7ff;
-  border: 1.5px solid #e0e4f0;
+  background: #f5f5f5;
+  border: 1.5px solid #e2e2e2;
   border-radius: 30px;
   padding: 6px 14px;
   font-size: 13px;
