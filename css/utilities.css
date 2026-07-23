@@ -1199,6 +1199,11 @@
   outline: none;
   box-sizing: border-box;
 }
+.u-input:focus-visible {
+  outline: 2px solid #293294;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(41, 50, 148, 0.25);
+}
 
 /* ── MISC ── */
 .u-list-none {

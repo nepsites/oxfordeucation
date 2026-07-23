@@ -313,8 +313,11 @@ export default function PageContent() {
                 >
                   <div className="u-grid-2-16-mb16 form-row-2">
                     <div>
-                      <label className="u-label-block2">Full Name *</label>
+                      <label className="u-label-block2" htmlFor="contact-name">
+                        Full Name *
+                      </label>
                       <input
+                        id="contact-name"
                         className="u-input"
                         type="text"
                         required
@@ -328,8 +331,11 @@ export default function PageContent() {
                       />
                     </div>
                     <div>
-                      <label className="u-label-block2">Phone / WhatsApp *</label>
+                      <label className="u-label-block2" htmlFor="contact-phone">
+                        Phone / WhatsApp *
+                      </label>
                       <input
+                        id="contact-phone"
                         className="u-input"
                         type="tel"
                         required
@@ -344,8 +350,11 @@ export default function PageContent() {
                     </div>
                   </div>
                   <div className="u-mb16">
-                    <label className="u-label-block2">Email Address</label>
+                    <label className="u-label-block2" htmlFor="contact-email">
+                      Email Address
+                    </label>
                     <input
+                      id="contact-email"
                       className="u-input"
                       type="email"
                       placeholder="your@email.com"
@@ -359,19 +368,13 @@ export default function PageContent() {
                   </div>
                   <div className="u-grid-2-16-mb16 form-row-2">
                     <div>
-                      <label className="u-label-block2">Study Destination</label>
+                      <label className="u-label-block2" htmlFor="contact-destination">
+                        Study Destination
+                      </label>
                       <select
-                        style={{
-                          width: '100%',
-                          padding: '12px 16px',
-                          border: '1.5px solid #e0e4f0',
-                          borderRadius: '10px',
-                          fontSize: '14px',
-                          fontFamily: 'Lato,Helvetica,Arial,sans-serif',
-                          outline: 'none',
-                          background: '#fff',
-                          boxSizing: 'border-box',
-                        }}
+                        id="contact-destination"
+                        className="u-input"
+                        style={{ background: '#fff' }}
                         onFocus={(e) => {
                           e.currentTarget.style.borderColor = '#293294';
                         }}
@@ -392,19 +395,13 @@ export default function PageContent() {
                       </select>
                     </div>
                     <div>
-                      <label className="u-label-block2">Service Interested In</label>
+                      <label className="u-label-block2" htmlFor="contact-service">
+                        Service Interested In
+                      </label>
                       <select
-                        style={{
-                          width: '100%',
-                          padding: '12px 16px',
-                          border: '1.5px solid #e0e4f0',
-                          borderRadius: '10px',
-                          fontSize: '14px',
-                          fontFamily: 'Lato,Helvetica,Arial,sans-serif',
-                          outline: 'none',
-                          background: '#fff',
-                          boxSizing: 'border-box',
-                        }}
+                        id="contact-service"
+                        className="u-input"
+                        style={{ background: '#fff' }}
                         onFocus={(e) => {
                           e.currentTarget.style.borderColor = '#293294';
                         }}
@@ -423,21 +420,15 @@ export default function PageContent() {
                     </div>
                   </div>
                   <div style={{ marginBottom: '22px' }}>
-                    <label className="u-label-block2">Your Message</label>
+                    <label className="u-label-block2" htmlFor="contact-message">
+                      Your Message
+                    </label>
                     <textarea
+                      id="contact-message"
+                      className="u-input"
                       rows="4"
                       placeholder="Tell us about your educational background and goals..."
-                      style={{
-                        width: '100%',
-                        padding: '12px 16px',
-                        border: '1.5px solid #e0e4f0',
-                        borderRadius: '10px',
-                        fontSize: '14px',
-                        fontFamily: 'Lato,Helvetica,Arial,sans-serif',
-                        outline: 'none',
-                        boxSizing: 'border-box',
-                        resize: 'vertical',
-                      }}
+                      style={{ resize: 'vertical' }}
                       onFocus={(e) => {
                         e.currentTarget.style.borderColor = '#293294';
                       }}
