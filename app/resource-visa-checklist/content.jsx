@@ -4,11 +4,22 @@ import { useState } from 'react';
 import Header from '../_components/Header';
 import Footer from '../_components/Footer';
 
+// Syncs the row's visual "checked" state to whatever the checkbox's actual
+// state already is (used after the checkbox itself was toggled — by mouse,
+// keyboard, or assistive tech — so we never re-flip it ourselves).
+function syncChecklistItem(el) {
+  const cb = el?.querySelector('input[type=checkbox]');
+  if (!cb) return;
+  el.classList.toggle('checked', cb.checked);
+}
+
+// Flips the checkbox (used when the row is clicked somewhere other than the
+// checkbox itself) and syncs the visual state to match.
 function toggleCheck(el) {
-  const cb = el.querySelector('input[type=checkbox]');
+  const cb = el?.querySelector('input[type=checkbox]');
   if (!cb) return;
   cb.checked = !cb.checked;
-  el.classList.toggle('checked', cb.checked);
+  syncChecklistItem(el);
 }
 
 export default function PageContent() {
@@ -30,14 +41,16 @@ export default function PageContent() {
       <div className="ann-bar" id="annBar">
         🎓 <strong>Admissions Open 2026!</strong> Free Counselling for Australia, UK, USA & Japan.
         <a href="/contact">Book Now</a> — Limited Seats!
-        <span
+        <button
+          type="button"
           className="ann-close"
+          aria-label="Dismiss announcement"
           onClick={(e) => {
             e.currentTarget.parentElement.style.display = 'none';
           }}
         >
           ✕
-        </span>
+        </button>
       </div>
 
       <div className="top-bar">
@@ -243,10 +256,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Completed Visa Application Form (online via ImmiAccount)</div>
                     </div>
@@ -254,10 +272,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Valid Confirmation of Enrolment (CoE) from PRISMS</div>
                       <span className="item-note">
@@ -268,10 +291,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Passport (valid for at least 6 months beyond intended stay)</div>
                     </div>
@@ -279,10 +307,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Passport-size photographs (recent, white background)</div>
                     </div>
@@ -290,10 +323,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>English proficiency proof (IELTS 6.0+ / TOEFL 60+ / PTE 50+)</div>
                     </div>
@@ -306,10 +344,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Academic transcripts (all levels — SLC/SEE, +2, Bachelor)</div>
                       <span className="item-note">
@@ -320,10 +363,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Academic certificates</div>
                     </div>
@@ -331,10 +379,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Character / Conduct Certificate from last institution</div>
                     </div>
@@ -342,10 +395,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Statement of Purpose (SOP)</div>
                       <span className="item-note">
@@ -361,10 +419,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Bank statement (last 6 months) — minimum NPR 60 lakhs recommended</div>
                     </div>
@@ -372,10 +435,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Bank balance certificate (original, on bank letterhead)</div>
                     </div>
@@ -383,10 +451,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Parents' income proof (salary slips, tax returns, or business registration)
@@ -396,10 +469,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Property documents (land ownership, house deed) if available</div>
                     </div>
@@ -407,10 +485,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Sponsor letter (if someone other than parents is sponsoring)</div>
                     </div>
@@ -423,10 +506,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Overseas Student Health Cover (OSHC) — mandatory, covers full study duration
@@ -436,10 +524,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Health examination (if required — often waived for short courses)</div>
                     </div>
@@ -447,10 +540,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Police clearance certificate (if 16+ and studied/lived abroad 12+ months)
@@ -460,10 +558,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Genuine Student (GS) responses/evidence</div>
                     </div>
@@ -495,10 +598,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Confirmation of Acceptance for Studies (CAS) number</div>
                     </div>
@@ -506,10 +614,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Valid passport (must be valid for entire UK stay)</div>
                     </div>
@@ -517,10 +630,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         English language certificate (IELTS Academic 5.5–7.0 depending on course)
@@ -530,10 +648,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Unconditional offer letter from UK institution</div>
                     </div>
@@ -546,10 +669,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Bank statement showing required funds for at least 28 consecutive days
@@ -563,10 +691,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Official financial sponsorship letter (if sponsor is covering costs)
@@ -581,10 +714,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Previous academic transcripts and certificates</div>
                     </div>
@@ -592,10 +730,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Personal statement / SOP</div>
                     </div>
@@ -603,10 +746,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Two academic reference letters</div>
                     </div>
@@ -619,10 +767,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>UK IHS surcharge payment receipt (NHS access fee — ~£776/year)</div>
                     </div>
@@ -630,10 +783,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Tuberculosis (TB) test result from approved clinic in Nepal</div>
                       <span className="item-note">
@@ -644,10 +802,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Biometric appointment confirmation</div>
                     </div>
@@ -679,10 +842,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Certificate of Eligibility (COE) — original, issued by Japanese immigration
@@ -692,10 +860,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Visa application form (available at Embassy of Japan, Kathmandu)</div>
                     </div>
@@ -703,10 +876,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Valid passport</div>
                     </div>
@@ -714,10 +892,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Passport-size photos (white background, 4.5cm × 4.5cm)</div>
                     </div>
@@ -725,10 +908,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Acceptance letter from Japanese institution</div>
                     </div>
@@ -741,10 +929,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>All academic transcripts and certificates</div>
                       <span className="item-note">
@@ -756,10 +949,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Japanese Language Proficiency Test (JLPT) certificate (if available)
@@ -769,10 +967,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Study plan / research plan (in Japanese or English)</div>
                     </div>
@@ -785,10 +988,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Bank statement (last 6 months) — JPY 2,000,000+ equivalent recommended
@@ -798,10 +1006,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Scholarship award letter (if applicable — MEXT, JASSO, etc.)</div>
                     </div>
@@ -809,10 +1022,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Guarantor's income certificate (if parents/sponsor is guaranteeing)</div>
                     </div>
@@ -844,10 +1062,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>DS-160 Non-Immigrant Visa Application (completed online)</div>
                     </div>
@@ -855,10 +1078,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Form I-20 (issued by your US university)</div>
                     </div>
@@ -866,10 +1094,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>SEVIS fee payment receipt (I-901 fee — USD 350)</div>
                     </div>
@@ -877,10 +1110,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Visa interview appointment confirmation</div>
                     </div>
@@ -888,10 +1126,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Valid passport (must be valid 6 months beyond intended stay)</div>
                     </div>
@@ -899,10 +1142,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>MRV fee payment receipt (visa application fee)</div>
                     </div>
@@ -915,10 +1163,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Acceptance letter from US university</div>
                     </div>
@@ -926,10 +1179,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Academic transcripts (all levels)</div>
                     </div>
@@ -937,10 +1195,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>GRE / GMAT / SAT score report (if applicable)</div>
                     </div>
@@ -948,10 +1211,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>English proficiency certificate (TOEFL 80+ / IELTS 6.5+)</div>
                     </div>
@@ -964,10 +1232,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Bank statements (personal and/or parents) — must cover full tuition + living
@@ -977,10 +1250,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Affidavit of support (if parents/sponsor is paying)</div>
                     </div>
@@ -988,10 +1266,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Scholarship or financial aid letter (if applicable)</div>
                     </div>
@@ -999,10 +1282,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Evidence of ties to Nepal (property, business, family)</div>
                     </div>
@@ -1034,10 +1322,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Letter of Acceptance from a Designated Learning Institution (DLI)</div>
                     </div>
@@ -1045,10 +1338,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Completed online study permit application (via IRCC)</div>
                     </div>
@@ -1056,10 +1354,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Valid passport</div>
                     </div>
@@ -1067,10 +1370,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Biometric enrolment (at VFS centre in Kathmandu)</div>
                     </div>
@@ -1078,10 +1386,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Statement of Purpose / Letter of Intent</div>
                     </div>
@@ -1094,10 +1407,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Proof of funds: CAD 22,895/year living amount for one applicant + tuition
@@ -1112,10 +1430,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>GIC certificate (if using — current IRCC-required amount)</div>
                     </div>
@@ -1123,10 +1446,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Tuition fee payment receipt (first semester/year)</div>
                     </div>
@@ -1134,10 +1462,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Sponsor's financial documents (if applicable)</div>
                     </div>
@@ -1150,10 +1483,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Academic transcripts and certificates</div>
                     </div>
@@ -1161,10 +1499,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>English proficiency certificate (IELTS 6.0+ / TOEFL 80+)</div>
                     </div>
@@ -1191,10 +1534,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Visa application form (Standard application form)</div>
                     </div>
@@ -1202,10 +1550,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Admission letter from Korean university</div>
                     </div>
@@ -1213,10 +1566,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Valid passport (+ copy of data page)</div>
                     </div>
@@ -1224,10 +1582,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Passport-size photos</div>
                     </div>
@@ -1235,10 +1598,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         TOPIK certificate (if Korean proficiency required) or English proficiency
@@ -1253,10 +1621,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Bank statement — KRW 20,000,000 equivalent minimum</div>
                     </div>
@@ -1264,10 +1637,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>KGSP scholarship letter (if KGSP applicant)</div>
                     </div>
@@ -1275,10 +1653,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Academic transcripts and certificates (attested)</div>
                     </div>
@@ -1286,10 +1669,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Study plan (in Korean or English)</div>
                     </div>
@@ -1319,10 +1707,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Visa application form (completed and signed)</div>
                     </div>
@@ -1330,10 +1723,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Admission letter / enrollment confirmation from German university</div>
                     </div>
@@ -1341,10 +1739,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Valid passport</div>
                     </div>
@@ -1352,10 +1755,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         German language proficiency (B2+ for German-taught; TestDaF 4/DSH-2)
@@ -1365,10 +1773,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>English language proof (for English-taught programs)</div>
                     </div>
@@ -1381,10 +1794,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Blocked account (Sperrkonto) with €11,904 for one year — from approved
@@ -1395,10 +1813,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>
                         Academic transcripts (must be APS certified if Indian education system
@@ -1409,10 +1832,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Motivation letter (Motivationsschreiben)</div>
                     </div>
@@ -1420,10 +1848,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>CV / Resume</div>
                     </div>
@@ -1431,10 +1864,15 @@ export default function PageContent() {
                   <div
                     className="checklist-item"
                     onClick={(e) => {
-                      toggleCheck(e.currentTarget);
+                      if (e.target.tagName !== 'INPUT') toggleCheck(e.currentTarget);
                     }}
                   >
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        syncChecklistItem(e.currentTarget.closest('.checklist-item'))
+                      }
+                    />
                     <div>
                       <div>Health insurance confirmation (German public or private)</div>
                     </div>

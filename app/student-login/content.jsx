@@ -89,14 +89,16 @@ export default function PageContent() {
       <div className="ann-bar" id="annBar">
         🎓 <strong>Admissions Open 2026!</strong> Free Counselling for Australia, UK, USA & Japan.
         <a href="/contact">Book Now</a> — Limited Seats!
-        <span
+        <button
+          type="button"
           className="ann-close"
+          aria-label="Dismiss announcement"
           onClick={(e) => {
             e.currentTarget.parentElement.style.display = 'none';
           }}
         >
           ✕
-        </span>
+        </button>
       </div>
 
       {/*  TOP BAR  */}
@@ -375,7 +377,7 @@ export default function PageContent() {
                         id="loginFieldEmail"
                         style={{ display: loginMethod === 'email' ? 'block' : 'none' }}
                       >
-                        <label>Email Address</label>
+                        <label htmlFor="loginEmail">Email Address</label>
                         <input
                           type="email"
                           id="loginEmail"
@@ -388,7 +390,7 @@ export default function PageContent() {
                         id="loginFieldPhone"
                         style={{ display: loginMethod === 'phone' ? 'block' : 'none' }}
                       >
-                        <label>Mobile Number</label>
+                        <label htmlFor="loginPhone">Mobile Number</label>
                         <div className="phone-input-wrap">
                           <span className="phone-prefix">+977</span>
                           <input
@@ -406,9 +408,10 @@ export default function PageContent() {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label>Password</label>
+                      <label htmlFor="loginPassword">Password</label>
                       <input
                         type="password"
+                        id="loginPassword"
                         name="password"
                         placeholder="Enter your password"
                         required
@@ -500,20 +503,27 @@ export default function PageContent() {
                       )}
                       <form onSubmit={handleRegister}>
                         <div className="form-group">
-                          <label>Full Name</label>
+                          <label htmlFor="regFullName">Full Name</label>
                           <input
                             type="text"
+                            id="regFullName"
                             name="fullName"
                             placeholder="Your full name"
                             required
                           />
                         </div>
                         <div className="form-group">
-                          <label>Email Address</label>
-                          <input type="email" name="email" placeholder="your@email.com" required />
+                          <label htmlFor="regEmail">Email Address</label>
+                          <input
+                            type="email"
+                            id="regEmail"
+                            name="email"
+                            placeholder="your@email.com"
+                            required
+                          />
                         </div>
                         <div className="form-group">
-                          <label>
+                          <label htmlFor="regPhone">
                             Phone Number{' '}
                             <span style={{ fontSize: '11px', color: '#aaa', fontWeight: '400' }}>
                               (Nepal mobile)
@@ -534,9 +544,10 @@ export default function PageContent() {
                           <div className="phone-hint" id="phoneHint"></div>
                         </div>
                         <div className="form-group">
-                          <label>Password</label>
+                          <label htmlFor="regPassword">Password</label>
                           <input
                             type="password"
+                            id="regPassword"
                             name="password"
                             placeholder="Create a password"
                             minLength="6"

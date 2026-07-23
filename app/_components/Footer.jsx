@@ -172,7 +172,16 @@ export default function Footer() {
                     e.currentTarget.reset();
                   }}
                 >
-                  <input placeholder="Your email" type="email" required />
+                  <label htmlFor="newsletterEmail" className="u-visually-hidden">
+                    Email address
+                  </label>
+                  <input
+                    id="newsletterEmail"
+                    name="email"
+                    placeholder="Your email"
+                    type="email"
+                    required
+                  />
                   <button type="submit">
                     <i className="fas fa-paper-plane"></i>
                   </button>

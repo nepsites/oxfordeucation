@@ -355,10 +355,10 @@
   background: #fafbff;
   font-family: inherit;
 }
-.form-group input:focus {
-  border-color: #aaa;
+.form-group input:focus-visible {
+  border-color: #293294;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 0 3px rgba(41, 50, 148, 0.25);
 }
 .form-group input::placeholder {
   color: #aab;
@@ -377,9 +377,9 @@
     box-shadow 0.2s;
 }
 .phone-input-wrap:focus-within {
-  border-color: #aaa;
+  border-color: #293294;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 0 3px rgba(41, 50, 148, 0.25);
 }
 .phone-prefix {
   padding: 11px 12px 11px 14px;

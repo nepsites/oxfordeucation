@@ -11,14 +11,16 @@ export default function PageContent() {
       <div className="ann-bar" id="annBar">
         🎓 <strong>Admissions Open 2026!</strong> Free Counselling for Australia, UK, USA & Japan.
         <a href="/contact">Book Now</a> — Limited Seats!
-        <span
+        <button
+          type="button"
           className="ann-close"
+          aria-label="Dismiss announcement"
           onClick={(e) => {
             e.currentTarget.parentElement.style.display = 'none';
           }}
         >
           ✕
-        </span>
+        </button>
       </div>
 
       <div className="top-bar">
