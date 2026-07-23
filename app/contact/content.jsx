@@ -468,7 +468,7 @@ export default function PageContent() {
         >
           <iframe
             title="Oxford International location map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=85.3418%2C27.7243%2C85.3518%2C27.7343&layer=mapnik&marker=27.7293%2C85.3468"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=85.3407804%2C27.7223215%2C85.3507804%2C27.7323215&layer=mapnik&marker=27.7273215%2C85.3457804"
             style={{
               display: 'block',
               width: '100%',
@@ -504,7 +504,7 @@ export default function PageContent() {
               Near Ring Road, easily accessible by public and private vehicles.
             </p>
             <a
-              href="https://www.google.com/maps/search/Sukedhara+Chowk+Kathmandu+Nepal"
+              href="https://maps.app.goo.gl/68eCY3YufvCWmGkaA"
               target="_blank"
               className="btn btn-white"
             >
